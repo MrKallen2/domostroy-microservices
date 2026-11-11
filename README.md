@@ -2,7 +2,7 @@
 
 Микросервисная система для автоматизации приема заказов, расчета смет на строительные работы, сохранения данных и отправки уведомлений. Проект разработан в рамках финальной работы по дисциплине «Информационные системы и программирование».
 
-## 📐 Архитектура
+## Архитектура
 
 ~~~text
                ┌──────────────────────┐
@@ -35,14 +35,14 @@
 | **Notifications Service** | `8003` | Обработка и логирование уведомлений клиентам |
 | **PostgreSQL** | `5432` | Реляционная база данных для хранения заказов (`db_data`) |
 
-## 🛠 Технологии
+## Технологии
 - **Язык:** Python 3.11
 - **Фреймворк:** FastAPI + Uvicorn
 - **База данных:** PostgreSQL 16 (драйвер `psycopg2-binary`)
 - **Контейнеризация:** Docker, Docker Compose
 - **CI/CD:** GitHub Actions (`.github/workflows/ci.yml`)
 
-## 📁 Структура репозитория
+## Структура репозитория
 ~~~text
 domostroy-microservices/
 ├── .github/workflows/       # CI пайплайн проверки кода
@@ -65,14 +65,14 @@ domostroy-microservices/
 └── README.md
 ~~~
 
-## 🚀 Быстрый старт
+## Быстрый старт
 ~~~bash
 cd domostroy-microservices
 docker compose up --build -d
 docker compose ps
 ~~~
 
-## 🧪 Сценарий проверки (cURL)
+## Сценарий проверки (cURL)
 
 1. Создать строительный заказ:
 ~~~bash
@@ -92,10 +92,10 @@ curl -X 'POST' \
 curl -X 'GET' 'http://localhost:8080/api/v1/orders'
 ~~~
 
-## 📄 Архитектура C4
+## Архитектура C4
 Подробное описание по уровням C4 (Context, Container, Component) находится в файле [docs/architecture_c4.md](docs/architecture_c4.md).
 
-## 🛑 Остановка проекта
+## Остановка проекта
 ~~~bash
 docker compose down        # Остановить контейнеры
 docker compose down -v     # Остановить и удалить данные БД (volume)
