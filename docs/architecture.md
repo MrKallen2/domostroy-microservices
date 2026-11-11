@@ -4,9 +4,9 @@
 Система автоматизирует прием строительных заказов, обработку через шлюз, сохранение в PostgreSQL и отправку уведомлений.
 
 ## 2. Container (Уровень 2: Контейнеры)
-- **Client (Postman / cURL):** нешний клиент.
+- **Client (Postman / cURL):** Внешний клиент.
 - **API Gateway (Port 8080):** Точка входа и координатор.
-- **Orders Service (Port 8002):** огика заказов и смет.
-- **Notifications Service (Port 8003):** огирование и уведомления.
-- **PostgreSQL (Port 5432):** аза данных с volume db_data.
+- **Orders Service (Port 8002):** Логика заказов и смет.
+- **Notifications Service (Port 8003):** Логирование и уведомления.
+- **PostgreSQL (Port 5432):** База данных с volume db_data.
 
